@@ -32,7 +32,16 @@
     },
     methods: {
       goPosition(index) {
-        this.$emit('navIndexEvent', index)
+        let currentUrl = this.$route.path;
+        console.log('index=='+index);
+        if (currentUrl.indexOf('/BSR-center') >= 0) {
+          this.$emit('navIndexEvent', index)
+          this.$router.push('/home')
+        }
+        if(currentUrl.indexOf('/home') >= 0) {
+          this.$emit('navIndexEvent', index)
+        }
+
       },
       navShow() {
         this.$emit('goTop', 6)

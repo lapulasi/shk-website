@@ -24,6 +24,39 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-fenxiang:before {
+  content: "\e905";
+}
+.icon-guanzhu:before {
+  content: "\e906";
+}
+.icon-menu2:before {
+  content: "\e907";
+}
+.icon-paixu:before {
+  content: "\e908";
+}
+.icon-pinglun:before {
+  content: "\e909";
+}
+.icon-qiuguanzhu:before {
+  content: "\e90a";
+}
+.icon-sousuo:before {
+  content: "\e90b";
+}
+.icon-shipin:before {
+  content: "\e901";
+}
+.icon-shipinzhibo:before {
+  content: "\e902";
+}
+.icon-shuben:before {
+  content: "\e903";
+}
+.icon-wenzhang:before {
+  content: "\e904";
+}
 .icon-menu-list:before {
   content: "\e900";
 }

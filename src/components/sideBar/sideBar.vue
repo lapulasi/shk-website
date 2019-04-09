@@ -8,6 +8,7 @@
         <p>扫描二维码立即在线咨询</p>
       </div>
     </div>
+
     <div class="side-panel qq">
       <span class="icon"></span>
       <p class="text">家长<br>交流群</p>
@@ -32,11 +33,16 @@
 
 <script>
   export default {
-      methods: {
-        goTop() {
-          this.$emit('goTop', 0)
-        }
+    data() {
+      return {
+        showAi: false
       }
+    },
+    methods: {
+      goTop() {
+        this.$emit('goTop', 0)
+      }
+    }
   }
 </script>
 
@@ -50,7 +56,8 @@
     margin-top: -170px;
     z-index: 40;
   }
-  .top{
+
+  .top {
     position: absolute;
     bottom: 1px;
     width: 80px;
@@ -58,7 +65,7 @@
     border-radius: 10px;
     background: #4586c4;
     cursor: pointer;
-    .icon{
+    .icon {
       display: inline-block;
       width: 26px;
       height: 34px;
@@ -66,6 +73,7 @@
       background: url("./top.png");
     }
   }
+
   .side-panel {
     position: relative;
     width: 80px;
@@ -90,10 +98,10 @@
       width: 236px;
       height: 248px;
       background: url("./group.png") center no-repeat;
-      img{
+      img {
         margin: 27px 34px 0 27px;
       }
-      p{
+      p {
         line-height: 22px;
         font-size: 15px;
         margin-top: 8px;
@@ -101,8 +109,8 @@
         color: #000;
       }
     }
-    &.ai{
-      .icon{
+    &.ai {
+      .icon {
         display: inline-block;
         width: 40px;
         height: 36px;
@@ -110,8 +118,8 @@
         background: url("./Ai.png");
       }
     }
-    &.wx{
-      .icon{
+    &.wx {
+      .icon {
         display: inline-block;
         width: 43px;
         height: 35px;
@@ -119,8 +127,8 @@
         background: url("./wx-chart.png");
       }
     }
-    &.qq{
-      .icon{
+    &.qq {
+      .icon {
         display: inline-block;
         width: 47px;
         height: 37px;
@@ -128,12 +136,12 @@
         background: url("./qq.png");
       }
     }
-    &:hover{
+    &:hover {
       background: #4586c4;
-      .text,.qr-code{
+      .text, .qr-code {
         display: block;
       }
-      .icon{
+      .icon {
         display: none;
       }
     }

@@ -93,6 +93,9 @@ button{
     cursor: pointer;
 
 }
-button:focus{
+button:focus, input:focus{
     outline: 0;
+}
+img{
+  max-width: 100%;
 }

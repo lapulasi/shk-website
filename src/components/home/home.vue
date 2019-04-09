@@ -3,7 +3,7 @@
     <div class="home">
       <div class="platform" :class="{marginTop129: hederShow}">
         <p class="fans"><span>9999个</span></p>
-        <div class="video-list clearfix">
+        <div class="video-list">
           <div class="video-item">
             <span class="title">干货</span>
             <p class="name">自闭症孩子真的没有感情吗？</p>
@@ -306,7 +306,7 @@
             <p>未知才是最大的恐惧，<br>
               不用过于焦虑忧心，<br>
               这里有专业的医生团队让你了解自闭症的方方面面</p>
-            <button class="button">点击进入</button>
+            <button class="button" @click="goBRSCenter">点击进入</button>
           </div>
           <div class="bg-img">
             <img src="./bsrch.jpg" width="800" height="600" alt="">
@@ -352,11 +352,13 @@
         </div>
       </div>
     </div>
+    <sideBar v-on:goTop="_scrollTop"></sideBar>
   </div>
 </template>
 
 <script>
   import BScroll from 'better-scroll'
+  import sideBar from 'components/sideBar/sideBar.vue'
   import logoUrlG from './logo.gif'
   import logoUrlP from './logo.png'
 
@@ -371,7 +373,7 @@
           loop: false,
           loopFillGroupWithBlank: true,
           pagination: '.swiper-pagination',
-          paginationClickable :true
+          paginationClickable: true
         },
         hederShow: false,
         imgSrc: logoUrlG
@@ -395,7 +397,7 @@
             }
             if (scrolly <= 70) {
               this.hederShow = true;
-            }else{
+            } else {
               this.hederShow = false;
             }
           }
@@ -430,6 +432,7 @@
         let tempList = this.$refs.contentWrapper;
         this.scrollhome.scrollToElement(tempList, 500);
         this.hederShow = true;
+        this.$emit('scrollEvent', true);
       },
       _scrollEvaluation() {
         let tempList = this.$refs.homeList3;
@@ -447,7 +450,15 @@
       },
       leave() {
         this.imgSrc = logoUrlP;
+      },
+      goBRSCenter() {
+        this.$emit('scrollEvent', true)
+        this.$router.push('/BSR-center');
       }
+    },
+    components: {
+//      'v-header': header,
+      sideBar
     }
   }
 </script>
