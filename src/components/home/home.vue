@@ -348,7 +348,17 @@
                 每天了解一点自闭症</p>
             </div>
           </div>
-          <p class="copy-right">Copyright©️2018 深圳市视惠康技术有限责任公司 版权所有</p>
+
+          <p class="copy-right">Copyright©️2018 深圳市视惠康儿童行为科学咨询有限责任公司 版权所有 <br> <a target="_blank" href="http://beian.miit.gov.cn">粤ICP备19033529号</a></p>
+          <div style="width:300px;margin:0 auto; padding:4px 0;">
+            <a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=44030602003640" style="display:inline-block;text-decoration:none;height:20px;line-height:20px;">
+              <img src="./gongan.png" style="float:left;"/>
+              <p style="float:left;height:20px; font-size: 14px;line-height:20px;margin: 0px 0px 0px 5px; color:#ffffff;">粤公网安备 44030602003640号</p >
+            </a>
+          </div>
+        </div>
+        <div style="width: 1110px; margin: 0 auto">
+
         </div>
       </div>
     </div>
@@ -894,7 +904,7 @@
 
   .resource-wrapper {
     width: 100%;
-    height: 961px;
+    height: 964px;
     overflow: hidden;
     background: url("home_11.jpg") center center no-repeat;
     .resource-panel {
@@ -916,7 +926,7 @@
     }
     .follow-us {
       width: 606px;
-      height: 318px;
+      height: 321px;
       margin: 64px auto 0;
       text-align: center;
       line-height: 22px;
@@ -928,7 +938,7 @@
         font-size: 30px;
       }
       .channel {
-        margin-top: 76px;
+        margin-top: 50px;
         overflow: hidden;
       }
       .we-chart {
@@ -968,11 +978,16 @@
       }
       .copy-right {
         line-height: 22px;
-        font-size: 16px;
+        font-size: 14px;
         font-family: SourceHanSansCN-Normal;
-        margin-top: 40px;
+        margin-top: 25px;
         color: #f8fbff;
+        a{
+          font-size: 14px;
+          color: #f8fbff;
+        }
       }
     }
+
   }
 </style>
